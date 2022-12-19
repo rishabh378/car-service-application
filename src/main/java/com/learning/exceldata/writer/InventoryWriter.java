@@ -34,7 +34,7 @@ public class InventoryWriter {
             sheet.autoSizeColumn(index);
         }
 
-        FileOutputStream fileOutputStream = new FileOutputStream(".\\resources\\poi-data.xlsx");
+        FileOutputStream fileOutputStream = new FileOutputStream("/home/rishabh/finalProject/car-service/resources/poi-data.xlsx");
         workbook.write(fileOutputStream);
 
         fileOutputStream.close();
