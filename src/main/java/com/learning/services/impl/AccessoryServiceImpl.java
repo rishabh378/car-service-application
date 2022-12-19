@@ -30,9 +30,8 @@ public class AccessoryServiceImpl implements AccessoryService {
 
     @Override
     public Optional<Accessory> findAccessoryById(Long id) {
-        List<Accessory> allAccessories = accessoryRepository.findAll();
-        Optional<Accessory> optionalAccessory = allAccessories.stream().filter(accessory -> accessory.getId() == id).findFirst();
-        return optionalAccessory;
+        return accessoryRepository.findAll()
+                .stream().filter(accessory -> accessory.getId().equals(id)).findFirst();
     }
 
     @Override
