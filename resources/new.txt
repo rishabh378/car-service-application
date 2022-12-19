@@ -1,0 +1,105 @@
+@Autowired
+	private InventoryReader inventoryReader;
+
+	@Autowired
+	private InventoryWriter inventoryWriter;
+
+	@Autowired
+	private CarWriter carWriter;
+
+	@Autowired
+	private AccessoryWriter accessoryWriter;
+
+	@Autowired
+	private CarReader carReader;
+
+	@Autowired
+	private AccessoryReader accessoryReader;
+
+	@Autowired
+	private InventoryController inventoryController;
+
+	@Autowired
+	private CarController carController;
+
+	@Autowired
+	private AccessoryController accessoryController;
+
+	@Autowired
+	private InventoryService inventoryService;
+
+	@Autowired
+	private CarService carService;
+
+	@Autowired
+	private AccessoryService accessoryService;
+
+	private void addDataToDatabase() throws IOException {
+    		inventoryService.addInventories(inventoryReader.getInventoryObjects());
+    		carService.addCars(carReader.getCarObjects());
+    		accessoryService.addAllAccessories(accessoryReader.getAccessoryObjects());
+    }
+
+    private void getObjectsById() throws IOException {
+    		System.out.println(inventoryController.getInventoryById(1));
+    		System.out.println(carController.getCarById(101));
+    		System.out.println(accessoryController.getAccessoryById(2005));
+    }
+
+    private void createNewWorkSheet() {
+    	// Creating new sheet and writing data to it
+
+    	Workbook workbook = new XSSFWorkbook();
+    	log.info("Done Execution");
+    	try {
+    			inventoryWriter.createInventoryObjects(workbook);
+    			carWriter.createCarObjects(workbook);
+    			accessoryWriter.createAccessoryObjects(workbook);
+    			workbook.close();
+    		} catch (IOException e) {
+    			log.error(e.getMessage());
+    		}
+    	}
+
+    	private void gettingAllAccessoryObjects() throws IOException {
+    		log.info("Getting all accessory Objects");
+    		System.out.println(accessoryReader.getAccessoryObjects());
+    	}
+
+    	private void gettingAllCarObjects() throws IOException {
+    		log.info("Getting all Car Objects");
+    		System.out.println(carReader.getCarObjects());
+    	}
+
+    	private void gettingAllInventoryObjects() throws IOException {
+    		log.info("Getting all inventory Objects");
+    		System.out.println(inventoryReader.getInventoryObjects());
+    	}
+
+
+
+    	------------------------------------------------------------------------
+
+    	    @Autowired
+        	private InventoryReader inventoryReader;
+
+        	@Autowired
+        	private CarReader carReader;
+
+        	@Autowired
+        	private AccessoryReader accessoryReader;
+
+        	@Autowired
+        	private InventoryService inventoryService;
+
+        	@Autowired
+        	private AccessoryService accessoryService;
+
+        	@Autowired
+        	private CarService carService;
+
+
+        	inventoryService.addInventories(inventoryReader.getInventoryObjects());
+            carService.addCars(carReader.getCarObjects());
+            accessoryService.addAllAccessories(accessoryReader.getAccessoryObjects());
+            log.info("Done Execution");
