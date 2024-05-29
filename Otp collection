@@ -47,7 +47,16 @@
           "contactType" : "EMAIL",
           "userContact" : "rishabhkumar@yopmail.com",
           "otpType" : "LOGIN",
+          "source" : "APP",
           "otp" : "7030"
+        },
+        "authorization" : {
+          "type" : "noauth",
+          "data" : [ {
+            "key" : "",
+            "value" : "",
+            "type" : null
+          } ]
         },
         "headers" : [ ],
         "queryParams" : [ {
@@ -62,7 +71,16 @@
           "value" : "6976",
           "enable" : true,
           "deleted" : false
-        } ]
+        } ],
+        "operations" : [ ]
+      },
+      "mock" : {
+        "mode" : "RAW",
+        "method" : "GET",
+        "jsonBody" : null,
+        "headers" : [ ],
+        "response" : "",
+        "operations" : [ ]
       }
     },
     "collectionId" : "collection-8c6e289d"
