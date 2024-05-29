@@ -48,7 +48,7 @@
           "userContact" : "rishabhkumar@yopmail.com",
           "otpType" : "LOGIN",
           "source" : "APP",
-          "otp" : "7030"
+          "otp" : "70300"
         },
         "authorization" : {
           "type" : "noauth",
