@@ -1,0 +1,128 @@
+{
+  "id" : "collection-8c6e289d",
+  "name" : "OTP",
+  "isFolder" : false,
+  "topMostLevel" : true,
+  "items" : [ {
+    "id" : "request-4fac9dc7",
+    "name" : "generate-otp",
+    "isFolder" : false,
+    "topMostLevel" : false,
+    "parentId" : "collection-8c6e289d",
+    "items" : [ ],
+    "requestDetails" : {
+      "actual" : {
+        "mode" : "RAW",
+        "url" : "http://localhost:8084/user/otp/login",
+        "method" : "POST",
+        "jsonBody" : {
+          "contactType" : "EMAIL",
+          "userContact" : "rishabhkumar@yopmail.com",
+          "otpType" : "LOGIN"
+        },
+        "headers" : [ ],
+        "queryParams" : [ {
+          "id" : 0,
+          "key" : "email",
+          "value" : "nikhil.negi@objectivehub.com",
+          "enable" : true,
+          "deleted" : false
+        } ]
+      }
+    },
+    "collectionId" : "collection-8c6e289d"
+  }, {
+    "id" : "request-80243de1",
+    "name" : "validate-otp",
+    "isFolder" : false,
+    "topMostLevel" : false,
+    "parentId" : "collection-8c6e289d",
+    "items" : [ ],
+    "requestDetails" : {
+      "actual" : {
+        "mode" : "RAW",
+        "url" : "http://localhost:8084/user/otp/validate",
+        "method" : "POST",
+        "jsonBody" : {
+          "contactType" : "EMAIL",
+          "userContact" : "rishabhkumar@yopmail.com",
+          "otpType" : "LOGIN",
+          "source" : "APP",
+          "otp" : "70380"
+        },
+        "authorization" : {
+          "type" : "noauth",
+          "data" : [ {
+            "key" : "",
+            "value" : "",
+            "type" : null
+          } ]
+        },
+        "headers" : [ ],
+        "queryParams" : [ {
+          "id" : 0,
+          "key" : "email",
+          "value" : "nikhil.negi@objectivehub.com",
+          "enable" : true,
+          "deleted" : false
+        }, {
+          "id" : 1,
+          "key" : "otp",
+          "value" : "6976",
+          "enable" : true,
+          "deleted" : false
+        } ],
+        "operations" : [ ]
+      },
+      "mock" : {
+        "mode" : "RAW",
+        "method" : "GET",
+        "jsonBody" : null,
+        "headers" : [ ],
+        "response" : "",
+        "operations" : [ ]
+      }
+    },
+    "collectionId" : "collection-8c6e289d"
+  }, {
+    "id" : "request-fc295ad9",
+    "name" : "new mock",
+    "isFolder" : false,
+    "topMostLevel" : false,
+    "parentId" : "collection-8c6e289d",
+    "items" : [ ],
+    "requestDetails" : {
+      "actual" : {
+        "mode" : "RAW",
+        "url" : "http://jsontypicodeurl.com/posts",
+        "method" : "GET",
+        "jsonBody" : null,
+        "authorization" : {
+          "type" : "noauth",
+          "data" : [ {
+            "key" : "",
+            "value" : "",
+            "type" : null
+          } ]
+        },
+        "headers" : [ ],
+        "queryParams" : [ ],
+        "operations" : [ ]
+      },
+      "mock" : {
+        "mode" : "RAW",
+        "url" : "http://jsontypicodeurl.com/posts",
+        "method" : "GET",
+        "jsonBody" : null,
+        "headers" : [ ],
+        "queryParams" : [ ],
+        "response" : {
+          "test" : "SUCCESS"
+        },
+        "operations" : [ ]
+      }
+    },
+    "collectionId" : "collection-8c6e289d"
+  } ],
+  "collectionId" : "collection-8c6e289d"
+}
